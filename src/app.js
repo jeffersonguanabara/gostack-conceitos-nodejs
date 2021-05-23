@@ -42,7 +42,7 @@ app.put("/repositories/:id", (request, response) => {
     title,
     url,
     techs
-  }
+  };
 
   const repositorieIndex = repositories.findIndex( repositorie => repositorie.id == id);
 
@@ -53,7 +53,7 @@ app.put("/repositories/:id", (request, response) => {
   const repositorie = repositories[repositorieIndex]; 
 
   repositorie.title = auxiliar.title;
-  repositorie.url = auxiliar.title;
+  repositorie.url = auxiliar.url;
   repositorie.techs = auxiliar.techs;
 
   repositories[repositorieIndex] = repositorie;
